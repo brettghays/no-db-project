@@ -23,14 +23,14 @@ module.exports = {
             homeScore: homeScore || schedule.homeScore,
             guestScore: guestScore || schedule.guestScore,
             outcome: outcome || schedule.outcome
-        }
-
+        };
+        
         res.status(200).send(schedule);
     },
-    delete: (req,res) = {
+    delete: ( req, res ) => {
         const deleteID = req.params.id;
-        gameIndex = schedule.findIndex(game => game.id == deleteID);
-        schedule.splice(gameIndex,1);
-        res.status(200).send(schedule);
+        gameIndex = schedule.findIndex(game => game.id == updateID);
+        schedule.splice( gameIndex, 1 );
+        res.status(200).send( schedule );
     }
 }
