@@ -12,5 +12,5 @@ app.get(scheduleBaseUrl, sc.read);
 app.put(`${scheduleBaseUrl}/:id`, sc.update);
 app.delete(`${scheduleBaseUrl}/:id`, sc.delete);
 
-const port = 3001;
+const port = 3000;
 app.listen(port, () => {console.log(`Welcome to the Big Show on port ${port}!`)});

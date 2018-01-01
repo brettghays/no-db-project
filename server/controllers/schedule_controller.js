@@ -1,8 +1,9 @@
 let schedule = [];
-let id = 1;
+let id = 0;
 
 module.exports = {
     create: (req,res) => {
+        //console.log(req.body)
         const {homeTeam, guestTeam, homeScore, guestScore, outcome} = req.body;
         schedule.push({id, homeTeam, guestTeam, homeScore, guestScore, outcome});
         id++;
@@ -13,8 +14,8 @@ module.exports = {
     },
     update: (req,res) => {
         const {homeScore, guestScore, outcome} = req.body;
-        const updateID = req.params.id;
-        const gameIndex = schedule.findIndex(game => game.id == updateID);
+        const deleteID = req.params.id;
+        const gameIndex = schedule.findIndex(game => game.id == deleteID);
         let game = schedule[gameIndex];
 
         schedule[gameIndex] = {
@@ -29,7 +30,7 @@ module.exports = {
     },
     delete: ( req, res ) => {
         const deleteID = req.params.id;
-        gameIndex = schedule.findIndex(game => game.id == updateID);
+        gameIndex = schedule.findIndex(game => game.id == deleteID);
         schedule.splice( gameIndex, 1 );
         res.status(200).send( schedule );
     }
