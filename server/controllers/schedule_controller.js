@@ -3,9 +3,8 @@ let id = 0;
 
 module.exports = {
     create: (req,res) => {
-        //console.log(req.body)
-        const {homeTeam, guestTeam, homeScore, guestScore, outcome} = req.body;
-        schedule.push({id, homeTeam, guestTeam, homeScore, guestScore, outcome});
+        const {date, day, time, homeTeam, guestTeam, homeScore, guestScore, outcome} = req.body;
+        schedule.push({id, date, day, time, homeTeam, guestTeam, homeScore, guestScore, outcome});
         id++;
         res.status(200).send(schedule);
     },
@@ -13,12 +12,16 @@ module.exports = {
         res.status(200).send(schedule);
     },
     update: (req,res) => {
-        const {homeTeam, guestTeam, homeScore, guestScore, outcome} = req.body;
-        const deleteID = req.params.id;
-        const gameIndex = schedule.findIndex(game => game.id == deleteID);
+        const {date, day, time, homeTeam, guestTeam, homeScore, guestScore, outcome} = req.body;
+        const updateID = req.params.id;
+        const gameIndex = schedule.findIndex(game => game.id == updateID);
         let game = schedule[gameIndex];
 
         schedule[gameIndex] = {
+            id: updateID,
+            date: date || schedule.date,
+            day: day || schedule.day,
+            time: time || schedule.time,
             homeTeam: homeTeam || schedule.homeTeam,
             guestTeam: guestTeam || schedule.guestTeam,
             homeScore: homeScore || schedule.homeScore,
