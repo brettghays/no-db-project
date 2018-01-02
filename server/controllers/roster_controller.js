@@ -1,7 +1,7 @@
 let roster = [];
 let id = 0;
 
-module.export = {
+module.exports = {
     create: (req,res) => {
         const {firstName, lastName, jerseyNumber, height, position} = req.body;
         roster.push({id, firstName, lastName, jerseyNumber, height, position});
@@ -9,7 +9,7 @@ module.export = {
         res.status(200).send(roster);
     },
     read: (req,res) => {
-        res.status(200).send(schedule);
+        res.status(200).send(roster);
     },
     update: (req,res) => {
         const {firstName, lastName, jerseyNumber, height, position} = req.body;
