@@ -8,14 +8,40 @@
   background-size: cover;
 }
 
-ul {
+.navbar {
+  height: 15%;
+  width: 100%;
   color: #20571e;
   display: flex;
   flex-direction: row;
 }
 
-li {
-  list-style-type: none;
+.body {
+  min-height: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.body > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: calc(40% - 70px)
+}
+
+.body > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box {
+  margin: 50px;
+  background-color: #fffcf2;
+  border: #222;
+  border-radius: 2px;
 }
 
 

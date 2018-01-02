@@ -12,10 +12,10 @@ class App extends Component {
           </ul>  
         </nav>
         <div className="body">
-          <div id="lastGame"></div>
-          <div id="schedule"></div>
-          <div id="blackFlag"></div>
-          <div id="upcomingGame"></div>
+          <div className="box lastGame"><div>Last Game</div></div>
+          <div className="box weekAtGlance"><div>Week At Glance</div></div>
+          <div className="box upcomingGame"><div>Upcoming Game</div></div>
+          <div className="box blackFlag"><div>Black Flag</div></div>
         </div>
       </div>
     );
