@@ -1,4 +1,4 @@
-let schedule = [];
+let schedule = ["Hello from Express"];
 let id = 0;
 
 module.exports = {
