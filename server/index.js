@@ -6,6 +6,7 @@ const rc = require(__dirname + '/controllers/roster_controller')
 const app = express();
 
 app.use(bodyParser.json());
+app.use( express.static( __dirname + "/../public/build/") );
 
 const scheduleBaseUrl = "/api/schedule";
 app.post(scheduleBaseUrl, sc.create);
@@ -19,5 +20,5 @@ app.get(rosterBaseUrl, rc.read);
 app.put(`${rosterBaseUrl}/:id`, rc.update);
 app.delete(`${rosterBaseUrl}/:id`, rc.delete);
 
-const port = 3000;
+const port = 5000;
 app.listen(port, () => {console.log(`Welcome to the Big Show on port ${port}!`)});

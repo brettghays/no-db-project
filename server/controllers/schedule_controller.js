@@ -1,4 +1,4 @@
-let schedule = ["Hello from Express"];
+let schedule = [{date: "1/4/18", day: "Thursday", time: "3:30PM", homeTeam: "Springville", guestTeam: "Salem", homeScore: 10, guestScore: 21, outcome: "Win"}];
 let id = 0;
 
 module.exports = {

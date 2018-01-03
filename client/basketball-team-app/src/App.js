@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Schedule from './components/schedule'
+
 class App extends Component {
   render() {
     return (
@@ -13,7 +15,7 @@ class App extends Component {
         </nav>
         <div className="body">
           <div className="box lastGame"><div>Last Game</div></div>
-          <div className="box weekAtGlance"><div>Week At Glance</div></div>
+          <div className="box weekAtGlance"><div><Schedule /></div></div>
           <div className="box upcomingGame"><div>Upcoming Game</div></div>
           <div className="box blackFlag"><div>Black Flag</div></div>
         </div>
