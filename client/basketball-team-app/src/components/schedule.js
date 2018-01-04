@@ -22,21 +22,19 @@ export default class Schedule extends Component {
     render(){
         const schedule = this.state.schedule.map(game => {
             return (
-                <div>
-                    <ul class = "schedule">
-                    <div key={game.id} className="parent">
-                        <li>Date: {game.date}</li>
-                        <li>Day: {game.day}</li>
-                        <li>{game.homeTeam} vs {game.guestTeam}</li>
-                        <li>Score: {game.homeScore} - {game.guestTeam}</li>
-                    </div>
+                <ul key={game.id} className="child">
+                    <li>Date: {game.date}</li>
+                    <li>Day: {game.day}</li>
+                    <li>{game.guestTeam} at {game.homeTeam}</li>
+                    <li>Score: {game.homeScore} - {game.guestScore}</li>
                 </ul>
-                </div>
-                
+                            
             )
             
        });
-       return ({schedule})
+       return (
+           <div className="parent">{schedule}</div>
+       )
        
     }
 }

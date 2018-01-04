@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Schedule from './components/schedule'
+import Roster from './components/roster'
 
 class App extends Component {
   render() {
@@ -14,10 +15,10 @@ class App extends Component {
           </ul>  
         </nav>
         <div className="body">
-         {/*  <div className="box lastGame"><div>Last Game</div></div>
+          <div className="box lastGame"><div>Last Game</div></div>
           <div className="box weekAtGlance"><Schedule /></div>
           <div className="box upcomingGame"><div>Upcoming Game</div></div>
-          <div className="box blackFlag"><div>Black Flag</div></div> */}
+          <div className="box blackFlag"><Roster /></div>
         </div>
       </div>
     );
