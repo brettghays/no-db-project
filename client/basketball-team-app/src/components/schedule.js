@@ -9,34 +9,31 @@ export default class Schedule extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get(`/api/schedule/`)
         .then(res => 
-            console.log(res))
-            //this.setState({schedule: res.data}))
+            this.setState({schedule: res.data}))
         .catch(err => console.log(err))
     }
     
     render(){
-        const schedule = this.state.schedule;
-        return (
-            <div className="full">
-                <h4>2017-2018 Game Schedule</h4>
-                <br/>
-                <ul className="schedule">
-                {this.state.schedule.map(game => {
-                    return(
-                        <div className="parent">
-                        <li key={game.id}>{game.date}</li>
-                        <li key={game.id}>{game.day}</li>
-                        <li key={game.id}>{game.homeTeam} vs. {game.guestTeam}</li>
-                        <li key={game.id}>{game.homeScore} - {game.guestScore}</li>
-                        </div>
-                    )}                
-                )}
+        const schedule = this.state.schedule.map(game => {
+            return (
+                <div>
+                    <ul class = "schedule">
+                    <div key={game.id} className="parent">
+                        <li>Date: {game.date}</li>
+                        <li>Day: {game.day}</li>
+                        <li>{game.homeTeam} vs {game.guestTeam}</li>
+                        <li>Score: {game.homeScore} - {game.guestTeam}</li>
+                    </div>
                 </ul>
-            </div>
-        )
+                </div>
+                
+            )
+            {schedule}
+       })
+       
     }
 }
 
