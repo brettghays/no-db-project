@@ -15,7 +15,7 @@ class App extends Component {
         </nav>
         <div className="body">
           <div className="box lastGame"><div>Last Game</div></div>
-          <div className="box weekAtGlance"><div><Schedule /></div></div>
+          <div className="box weekAtGlance"><Schedule /></div>
           <div className="box upcomingGame"><div>Upcoming Game</div></div>
           <div className="box blackFlag"><div>Black Flag</div></div>
         </div>

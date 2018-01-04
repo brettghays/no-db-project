@@ -11,8 +11,11 @@ export default class Schedule extends Component {
 
     componentDidMount() {
         axios.get(`/api/schedule/`)
-        .then(res => 
-            this.setState({schedule: res.data}))
+        .then(res => {
+            let gameData = res.data;
+            this.setState({schedule: gameData});
+            console.log(gameData)
+        })
         .catch(err => console.log(err))
     }
     
@@ -31,8 +34,9 @@ export default class Schedule extends Component {
                 </div>
                 
             )
-            {schedule}
-       })
+            
+       });
+       return ({schedule})
        
     }
 }
