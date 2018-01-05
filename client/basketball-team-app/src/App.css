@@ -8,14 +8,6 @@
   background-size: cover;
 }
 
-.navbar {
-  height: 15%;
-  width: 100%;
-  color: #20571e;
-  display: flex;
-  flex-direction: row;
-}
-
 .body {
   min-height: 85%;
   display: flex;

@@ -1,0 +1,8 @@
+.navbar {
+    height: 15%;
+    width: 67%;
+    color: #20571e;
+    display: flex;
+    flex-direction: column;
+    background: white;
+  }

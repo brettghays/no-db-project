@@ -1,4 +1,4 @@
-let roster = [{firstName: "Brett", lastName: "Hays", jerseyNumber: 42, height: "6'2", position: "Forward"}];
+let roster = [{firstName: "Brett", lastName: "Hays", jerseyNumber: 42, height: "6'2\"", position: "Forward"}];
 let id = 0;
 
 module.exports = {

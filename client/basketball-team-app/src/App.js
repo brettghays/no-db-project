@@ -3,17 +3,13 @@ import './App.css';
 
 import Schedule from './components/schedule'
 import Roster from './components/roster'
+import Navbar from './components/navbar'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar">
-          <ul>
-            <li>Roster</li>
-            <li>Schedule</li>
-          </ul>  
-        </nav>
+        <Navbar />
         <div className="body">
           <div className="box lastGame"><div>Last Game</div></div>
           <div className="box weekAtGlance"><Schedule /></div>
