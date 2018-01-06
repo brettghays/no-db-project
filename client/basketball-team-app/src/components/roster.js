@@ -21,8 +21,7 @@ export default class Roster extends Component {
         const roster = this.state.roster.map(player => {
             return (
                 <ul key={player.id} className="child">
-                    <li>First Name: {player.firstName}</li>
-                    <li>Last Name: {player.lastName}</li>
+                    <li>{player.firstName} {player.lastName}</li>
                     <li>Jersey Number: {player.jerseyNumber}</li>
                     <li>Height: {player.height}</li>
                     <li>Position: {player.position}</li>

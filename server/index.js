@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 app.post(scheduleBaseUrl, sc.create);
 app.get(scheduleBaseUrl, sc.read);
+app.get(`${scheduleBaseUrl}/:id`, sc.readOne);
 app.put(`${scheduleBaseUrl}/:id`, sc.update);
 app.delete(`${scheduleBaseUrl}/:id`, sc.delete);
 

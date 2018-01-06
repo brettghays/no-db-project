@@ -3,37 +3,41 @@
   width: 100vw;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
   background-image: url(http://sajhs.nebo.edu/sites/sajhs.nebo.edu/files/Spartan_bg.jpg);
   background-size: cover;
+  list-style-type: none;
 }
 
 .body {
   min-height: 85%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: flex-start;
-}
+ }
 
 .body > div {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-basis: calc(40% - 70px)
+  justify-content: left;
+  flex-direction: row;
 }
 
 .body > div > div {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .box {
   margin: 50px;
   background-color: #fffcf2;
   border: #222;
-  border-radius: 2px;
+  border-radius: 10px;
 }
+
+
+
+
 
 

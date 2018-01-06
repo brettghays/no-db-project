@@ -23,11 +23,13 @@ export default class Schedule extends Component {
         const schedule = this.state.schedule.map(game => {
             return (
                 <ul key={game.id} className="child">
+                    <li>Game {game.id}</li>
                     <li>Date: {game.date}</li>
                     <li>Day: {game.day}</li>
                     <li>{game.guestTeam} at {game.homeTeam}</li>
-                    <li>Score: {game.homeScore} - {game.guestScore}</li>
+                    <button className="directions">Get Directions</button>
                 </ul>
+                
                             
             )
             
