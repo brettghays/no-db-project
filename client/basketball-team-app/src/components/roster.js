@@ -19,10 +19,11 @@ export default class Roster extends Component {
     }
 
     render(){
-        const roster = this.state.roster.map(player => {
+        const roster = this.state.roster.map((player,i) => {
+            let index = i;
             return (
                 <ul key={player.id} className="child">
-                    <li>Player ID: {player.id}</li>
+                    <li>Player ID: {index}</li>
                     <li>{player.firstName} {player.lastName}</li>
                     <li>Number: {player.jerseyNumber}</li>
                     <li>Height: {player.height}</li>

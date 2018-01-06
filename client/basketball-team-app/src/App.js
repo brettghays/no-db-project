@@ -7,6 +7,7 @@ import Navbar from './components/navbar'
 import Header from './components/header'
 import Game from './components/game'
 import Delete from './components/delete'
+import Contact from './components/contact'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Navbar />
+        <Contact />
         <div className="body">
           <div className="box weekAtGlance"><Schedule /></div>
           <div className="box blackFlag"><Roster /></div>

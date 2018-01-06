@@ -17,7 +17,7 @@ export default class Delete extends Component {
     }
     
     handleSubmit(event){
-        event.preventDefault();
+        //event.preventDefault();
         let {value} = this.state;
         console.log(value)
         axios.delete(`/api/roster/${value}`)
